@@ -1,0 +1,126 @@
+/* Reset and base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    position: relative; /* Position relative for pseudo-element */
+    overflow-y: auto; /* Hide overflow to avoid scrollbars */
+    height: auto; /* Full viewport height */
+}
+
+/* Background Image with Blur */
+body::before {
+    content: ""; /* Create a pseudo-element */
+    position: absolute; /* Position it absolutely */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-image: url('media/bg.png'); /* Replace with your background image */
+    background-size: cover; /* Cover the entire screen */
+    background-position: center; /* Center the background image */
+    filter: blur(3px); /* Apply blur */
+    z-index: -1; /* Place it behind content */
+}
+
+/* Centered Container for content */
+.container {
+    max-width: 800px; /* Max width for the container */
+    width: 90%; /* Set to 90% of the viewport width */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    height: 100%; /* Full height of the viewport */
+    position: relative; /* Ensure it is above the background */
+    text-align: center; /* Center text inside */
+    margin: 0 auto; /* Center the container itself */
+}
+
+/* Header and Navigation */
+header {
+    margin-bottom: 2em;
+    text-align: center; /* Center the header text */
+}
+header h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* About Us Section */
+.about-us {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent white background */
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Set width to 100% for more flexibility */
+    max-width: 800px; /* Set a max width to limit expansion */
+}
+.about-us h2 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+}
+.about-us ul {
+    list-style-type: none;
+    margin-bottom: 1.5em;
+    padding: 0; /* Remove padding for the list */
+}
+.about-us li {
+    font-size: 1em;
+    margin: 0.5em 0;
+}
+
+/* Learn More Button */
+.learn-more-button {
+    display: inline-block; /* Keep as inline-block for button styling */
+    margin-top: 1em;
+    padding: 0.8em 1.5em;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+.learn-more-button:hover {
+    background-color: #0056b3;
+}
+
+/* GIF Styling */
+.about-gif {
+    width: 468px; /* Set width */
+    height: 60px; /* Set height */
+    margin-top: 1.5em; /* Add space above the GIF */
+    display: block; /* Ensures it takes the full width */
+    margin-left: auto; /* Center GIF horizontally */
+    margin-right: auto; /* Center GIF horizontally */
+}
+
+/* Footer */
+footer {
+    margin-top: 2em;
+    text-align: center; /* Center the footer text */
+}
+footer p {
+    font-size: 0.9em;
+    margin: 0.5em 0;
+}
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
